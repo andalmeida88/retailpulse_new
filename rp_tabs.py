@@ -20,7 +20,7 @@ from dash.dependencies import Input, Output
 app = dash.Dash(__name__)
 
 # Import and clean data (importing csv into pandas)
-xls_m = pd.ExcelFile("C:/Users/afalmeida/Desktop/Retail_pulse_py/retail_pulse_data.xls")
+xls_m = pd.ExcelFile("retail_pulse_data.xls")
 df_m_PT = pd.read_excel(xls_m,'PT')
 df_m_ESP = pd.read_excel(xls_m,'ESP')
 df_m_IT = pd.read_excel(xls_m,'IT')
@@ -31,7 +31,7 @@ df_m = df_m_PT.append([df_m_ESP,df_m_IT,df_m_DE],ignore_index=True)
 df_m
 
 
-xls_q = pd.ExcelFile("C:/Users/afalmeida/Desktop/Retail_pulse_py/retail_pulse_quarters.xls")
+xls_q = pd.ExcelFile("retail_pulse_quarters.xls")
 df_q_PT = pd.read_excel(xls_q,'PT')
 df_q_ESP = pd.read_excel(xls_q,'ESP')
 df_q_IT = pd.read_excel(xls_q,'IT')
@@ -42,7 +42,7 @@ df_q = df_q_PT.append([df_q_ESP,df_q_IT,df_q_DE],ignore_index=True)
 df_q
 
 
-xls_y = pd.ExcelFile("C:/Users/afalmeida/Desktop/Retail_pulse_py/retail_pulse_years.xls")
+xls_y = pd.ExcelFile("retail_pulse_years.xls")
 df_y_PT = pd.read_excel(xls_y,'PT')
 df_y_ESP = pd.read_excel(xls_y,'ESP')
 df_y_IT = pd.read_excel(xls_y,'IT')
